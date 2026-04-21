@@ -4,7 +4,7 @@
    ═══════════════════════════════════════════════════════════════════ */
 
 // URL del Apps Script para inventario (configurar en el HTML)
-window.INVENTORY_SCRIPT_URL = window.INVENTORY_SCRIPT_URL || 'REEMPLAZAR_CON_URL';
+window.INVENTORY_SCRIPT_URL = window.INVENTORY_SCRIPT_URL || 'https://script.google.com/macros/s/AKfycbx6yKA2KUgtFq3BVn8FwPkt2_vZ3F8ARr-TmaVpAktZYe8Eqbj2o3hIsTXg5uf6RxI/exec';
 
 class Inventory {
   constructor() {
@@ -22,7 +22,7 @@ class Inventory {
     }
 
     // Si la URL no está configurada, usar datos mock
-    if (!window.INVENTORY_SCRIPT_URL || window.INVENTORY_SCRIPT_URL === 'REEMPLAZAR_CON_URL') {
+    if (!window.INVENTORY_SCRIPT_URL || window.INVENTORY_SCRIPT_URL === 'https://script.google.com/macros/s/AKfycbx6yKA2KUgtFq3BVn8FwPkt2_vZ3F8ARr-TmaVpAktZYe8Eqbj2o3hIsTXg5uf6RxI/exec') {
       console.warn('⚠️ URL de inventario no configurada. Usando datos de ejemplo.');
       this.products = this.getMockProducts();
       return this.products;
