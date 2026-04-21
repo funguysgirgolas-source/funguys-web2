@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="FunGuys - Equipo de ingenieros y productores especializados en cultivo de hongos comestibles en Argentina.">
+  <title>Quiénes Somos | FunGuys</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="main-nav" id="mainNav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Fun<span>Guys</span></a>
+      
+      <ul class="nav-menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="quienes-somos.html" class="active">Quiénes somos</a></li>
+        <li><a href="cursos.html">Cursos</a></li>
+        <li><a href="kits.html">Kits</a></li>
+        <li><a href="insumos.html">Insumos</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="insumos.html#cart" class="nav-cta">🛒 Carrito</a></li>
+      </ul>
+
+      <div class="hamburger" onclick="toggleMobileNav()">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section style="padding-top: 140px; padding-bottom: 40px;">
+    <div class="container-narrow">
+      <div class="text-center">
+        <span class="badge">🍄 Producción local · Ingeniería aplicada</span>
+        <h1 style="margin-top: 24px; margin-bottom: 24px;">
+          Conocimiento técnico al servicio de <em style="color: var(--amber); font-style: italic;">la producción real</em>
+        </h1>
+        <p class="section-subtitle" style="margin: 0 auto;">
+          Somos un equipo de ingenieros y productores comprometidos con democratizar el cultivo de hongos comestibles 
+          en Argentina. Formación técnica, calidad profesional y soporte continuo.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- EQUIPO -->
+  <section>
+    <div class="container">
+      <div class="grid grid-2" style="align-items: center; gap: 60px;">
+        <div>
+          <!-- FOTO REAL: Aquí va una foto tuya trabajando o portrait profesional -->
+          <!-- Por ahora usamos placeholder, reemplazá después -->
+          <div style="background: var(--surface); border-radius: var(--radius-lg); 
+                      aspect-ratio: 4/5; display: flex; align-items: center; justify-content: center;
+                      border: 1px solid var(--border);">
+            <div style="text-align: center; padding: 40px; color: var(--cream-muted);">
+              <div style="font-size: 64px; margin-bottom: 16px;">👤</div>
+              <p style="font-size: 14px;">Foto del equipo<br>Reemplazar con imagen real</p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <span class="section-tag">Fundador</span>
+          <h2 style="margin-bottom: 20px;">Ing. Fernando David Ocampo</h2>
+          <p class="section-subtitle" style="margin-bottom: 24px; max-width: none;">
+            Ingeniero Mecánico · Magíster en Energías Renovables
+          </p>
+
+          <div style="display: flex; flex-direction: column; gap: 16px; margin-bottom: 32px;">
+            <div style="display: flex; gap: 12px; align-items: start;">
+              <span style="color: var(--amber); font-size: 20px;">🎓</span>
+              <div>
+                <strong style="color: var(--white);">Formación académica</strong>
+                <p class="text-muted" style="margin: 4px 0 0 0; font-size: 15px;">
+                  Ingeniería Mecánica + Maestría en Energías Renovables. Especialización en sistemas 
+                  productivos sustentables y tecnologías aplicadas al sector agroalimentario.
+                </p>
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 12px; align-items: start;">
+              <span style="color: var(--amber); font-size: 20px;">🔧</span>
+              <div>
+                <strong style="color: var(--white);">Experiencia técnica</strong>
+                <p class="text-muted" style="margin: 4px 0 0 0; font-size: 15px;">
+                  Consultor en sistemas productivos sustentables. Diseño de equipamiento para 
+                  bioindustrias (pasteurizadores atmosféricos, sistemas de control ambiental).
+                </p>
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 12px; align-items: start;">
+              <span style="color: var(--amber); font-size: 20px;">🍄</span>
+              <div>
+                <strong style="color: var(--white);">Producción real</strong>
+                <p class="text-muted" style="margin: 4px 0 0 0; font-size: 15px;">
+                  Productor activo de gírgolas y shiitake. Más de 500 productores capacitados en 
+                  Argentina. Metodología probada en campo, no solo teoría.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+            <a href="mailto:ferocampo087@gmail.com" class="btn btn-primary">
+              📧 Contactar
+            </a>
+            <a href="https://wa.me/5491122798768" class="btn btn-secondary" target="_blank">
+              💬 WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NUESTRA PRODUCCIÓN -->
+  <section class="reveal" style="background: var(--surface); padding: 80px 0;">
+    <div class="container">
+      <div class="text-center mb-xl">
+        <span class="section-tag">Nuestra producción</span>
+        <h2 class="section-title">De la teoría a la cosecha real</h2>
+        <p class="section-subtitle" style="margin: 0 auto;">
+          No somos solo instructores. Somos productores activos. Todo lo que enseñamos 
+          lo aplicamos diariamente en nuestra propia producción.
+        </p>
+      </div>
+
+      <!-- Grid de fotos reales -->
+      <div class="grid grid-3">
+        <div class="card" style="padding: 0; overflow: hidden;">
+          <!-- FOTO REAL 1: Close-up láminas (WhatsApp_Image_2026-04-20_at_22_42_28.jpeg) -->
+          <img src="images/produccion-1.jpg" alt="Gírgolas en producción - detalle de láminas" 
+               style="width: 100%; height: 300px; object-fit: cover;">
+          <div style="padding: 24px;">
+            <h4 style="margin-bottom: 8px;">Calidad premium</h4>
+            <p class="text-muted" style="margin: 0; font-size: 14px;">
+              Hongos frescos cosechados en punto óptimo de maduración.
+            </p>
+          </div>
+        </div>
+
+        <div class="card" style="padding: 0; overflow: hidden;">
+          <!-- FOTO REAL 2: Vista superior (WhatsApp_Image_2026-04-20_at_22_42_30.jpeg) -->
+          <img src="images/produccion-2.jpg" alt="Gírgolas frescas - vista superior" 
+               style="width: 100%; height: 300px; object-fit: cover;">
+          <div style="padding: 24px;">
+            <h4 style="margin-bottom: 8px;">Proceso controlado</h4>
+            <p class="text-muted" style="margin: 0; font-size: 14px;">
+              Condiciones ambientales monitoreadas para máxima eficiencia biológica.
+            </p>
+          </div>
+        </div>
+
+        <div class="card" style="padding: 0; overflow: hidden;">
+          <!-- FOTO REAL 3: Racimo en estante (WhatsApp_Image_2026-04-20_at_22_42_31.jpeg) -->
+          <img src="images/produccion-3.jpg" alt="Fructificación en sala de producción" 
+               style="width: 100%; height: 300px; object-fit: cover;">
+          <div style="padding: 24px;">
+            <h4 style="margin-bottom: 8px;">Instalaciones reales</h4>
+            <p class="text-muted" style="margin: 0; font-size: 14px;">
+              Salas de incubación y fructificación diseñadas según estándares profesionales.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FILOSOFÍA -->
+  <section class="reveal">
+    <div class="container-narrow">
+      <div class="text-center mb-xl">
+        <h2 class="section-title">Nuestra filosofía</h2>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 24px;">
+        <div class="card">
+          <h3 style="margin-bottom: 12px; display: flex; align-items: center; gap: 12px;">
+            <span style="color: var(--amber); font-size: 28px;">🎯</span>
+            Formación técnica, no recetas mágicas
+          </h3>
+          <p class="text-muted" style="margin: 0; line-height: 1.7;">
+            Enseñamos los fundamentos científicos del cultivo. No vendemos trucos ni atajos. 
+            Comprendiendo cómo funciona el sistema, podés adaptarlo a tus condiciones específicas 
+            y resolver problemas por vos mismo.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3 style="margin-bottom: 12px; display: flex; align-items: center; gap: 12px;">
+            <span style="color: var(--amber); font-size: 28px;">🔬</span>
+            Ingeniería aplicada al sector bioindustrial
+          </h3>
+          <p class="text-muted" style="margin: 0; line-height: 1.7;">
+            Diseñamos equipamiento específico (pasteurizadores atmosféricos, sistemas de control) 
+            pensando en la realidad argentina: accesibilidad, materiales locales, costos razonables. 
+            No adaptaciones de equipos europeos, sino soluciones desde cero.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3 style="margin-bottom: 12px; display: flex; align-items: center; gap: 12px;">
+            <span style="color: var(--amber); font-size: 28px;">🌱</span>
+            Sostenibilidad y economía circular
+          </h3>
+          <p class="text-muted" style="margin: 0; line-height: 1.7;">
+            Aprovechamos residuos biomásicos (viruta, paja, bagazo) para producir alimento de alto 
+            valor. El sustrato agotado vuelve al suelo como enmienda orgánica. Cerramos el ciclo, 
+            reducimos quema de residuos y generamos oportunidades económicas locales.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3 style="margin-bottom: 12px; display: flex; align-items: center; gap: 12px;">
+            <span style="color: var(--amber); font-size: 28px;">🤝</span>
+            Soporte continuo, no solo un curso
+          </h3>
+          <p class="text-muted" style="margin: 0; line-height: 1.7;">
+            No terminás el curso y quedás solo. Seguimos acompañándote: asesoramiento técnico, 
+            resolución de problemas, optimización de procesos. Queremos que tu proyecto funcione, 
+            no solo que apruebes un examen.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- UBICACIÓN Y CONTACTO -->
+  <section class="reveal">
+    <div class="container">
+      <div class="grid grid-2" style="gap: 60px;">
+        <div>
+          <h2 style="margin-bottom: 24px;">Dónde estamos</h2>
+          <p class="text-muted" style="margin-bottom: 32px; line-height: 1.7;">
+            Operamos desde City Bell, La Plata, Buenos Aires. Realizamos envíos a toda Argentina 
+            y coordinamos visitas técnicas a nuestras instalaciones para quienes quieran ver el 
+            proceso en vivo.
+          </p>
+
+          <div style="display: flex; flex-direction: column; gap: 16px;">
+            <div style="display: flex; gap: 12px; align-items: start;">
+              <span style="color: var(--amber);">📍</span>
+              <div>
+                <strong style="color: var(--white);">Ubicación</strong>
+                <p class="text-muted" style="margin: 4px 0 0 0;">City Bell, La Plata, Buenos Aires</p>
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 12px; align-items: start;">
+              <span style="color: var(--amber);">📧</span>
+              <div>
+                <strong style="color: var(--white);">Email</strong>
+                <p class="text-muted" style="margin: 4px 0 0 0;">
+                  <a href="mailto:ferocampo087@gmail.com">ferocampo087@gmail.com</a>
+                </p>
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 12px; align-items: start;">
+              <span style="color: var(--amber);">📞</span>
+              <div>
+                <strong style="color: var(--white);">WhatsApp</strong>
+                <p class="text-muted" style="margin: 4px 0 0 0;">
+                  <a href="https://wa.me/5491122798768" target="_blank">+54 9 11 2279 8768</a>
+                </p>
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 12px; align-items: start;">
+              <span style="color: var(--amber);">📱</span>
+              <div>
+                <strong style="color: var(--white);">Instagram</strong>
+                <p class="text-muted" style="margin: 4px 0 0 0;">
+                  <a href="https://instagram.com/funguys.girgolas" target="_blank">@funguys.girgolas</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" style="background: linear-gradient(135deg, var(--surface) 0%, var(--surface2) 100%); 
+                               padding: 40px; text-align: center;">
+          <h3 style="margin-bottom: 16px;">¿Te gustaría visitar nuestras instalaciones?</h3>
+          <p class="text-muted" style="margin-bottom: 32px; line-height: 1.7;">
+            Organizamos visitas técnicas para productores, estudiantes y curiosos. 
+            Podés ver el proceso completo: desde la inoculación hasta la cosecha.
+          </p>
+          <a href="https://wa.me/5491122798768?text=Hola!%20Me%20gustaría%20coordinar%20una%20visita%20técnica%20a%20FunGuys" 
+             class="btn btn-primary" target="_blank">
+            Coordinar visita
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>FunGuys</h4>
+          <p style="color: var(--cream-muted); font-size: 14px; line-height: 1.6;">
+            Cultivo de hongos comestibles en Argentina. Formación, kits e insumos profesionales.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navegación</h4>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="quienes-somos.html">Quiénes somos</a></li>
+            <li><a href="cursos.html">Cursos</a></li>
+            <li><a href="kits.html">Kits</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Productos</h4>
+          <ul>
+            <li><a href="insumos.html">Insumos</a></li>
+            <li><a href="servicios.html">Consultoría</a></li>
+            <li><a href="admin.html">Panel admin</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contacto</h4>
+          <ul>
+            <li><a href="mailto:ferocampo087@gmail.com">ferocampo087@gmail.com</a></li>
+            <li><a href="https://wa.me/5491122798768" target="_blank">+54 9 11 2279 8768</a></li>
+            <li><a href="https://instagram.com/funguys.girgolas" target="_blank">@funguys.girgolas</a></li>
+            <li>City Bell, La Plata, Buenos Aires</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 FunGuys. Todos los derechos reservados. | Ing. Fernando David Ocampo</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/cart.js"></script>
+  <script>
+    function toggleMobileNav() {
+      document.body.classList.toggle('mobile-nav-open');
+    }
+
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    reveals.forEach(el => observer.observe(el));
+
+    window.addEventListener('scroll', () => {
+      document.getElementById('mainNav').classList.toggle('scrolled', window.scrollY > 60);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Kits de autocultivo de hongos comestibles. Listos para usar, primera cosecha en 10-15 días. Gírgolas, shiitake y más.">
+  <title>Kits de Autocultivo | FunGuys</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+  <script>
+    window.INVENTORY_SCRIPT_URL = 'REEMPLAZAR_CON_URL';
+    window.ORDERS_SCRIPT_URL = 'REEMPLAZAR_CON_URL';
+  </script>
+</head>
+<body>
+
+  <nav class="main-nav" id="mainNav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Fun<span>Guys</span></a>
+      
+      <ul class="nav-menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="quienes-somos.html">Quiénes somos</a></li>
+        <li><a href="cursos.html">Cursos</a></li>
+        <li><a href="kits.html" class="active">Kits</a></li>
+        <li><a href="insumos.html">Insumos</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li>
+          <a href="insumos.html#cart" class="nav-cta" style="position: relative;">
+            🛒 Carrito
+            <span id="cartCount" style="display: none; position: absolute; top: -8px; right: -8px; 
+                  background: #dc2626; color: white; border-radius: 50%; width: 20px; height: 20px; 
+                  font-size: 11px; display: flex; align-items: center; justify-content: center; font-weight: 700;">0</span>
+          </a>
+        </li>
+      </ul>
+
+      <div class="hamburger" onclick="toggleMobileNav()">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section style="padding-top: 140px; padding-bottom: 60px;">
+    <div class="container">
+      <div class="text-center">
+        <span class="badge">📦 Listos para cultivar</span>
+        <h1 style="margin-top: 24px; margin-bottom: 24px;">
+          Kits de autocultivo <em style="color: var(--amber); font-style: italic;">listos para usar</em>
+        </h1>
+        <p class="section-subtitle" style="margin: 0 auto; max-width: 700px;">
+          Sustrato colonizado, instrucciones paso a paso y soporte técnico. Tu primera cosecha en 10-15 días. 
+          Perfecto para aprender o regalar.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CÓMO FUNCIONA -->
+  <section>
+    <div class="container">
+      <div class="text-center mb-xl">
+        <h2 class="section-title">¿Cómo funciona?</h2>
+        <p class="section-subtitle" style="margin: 0 auto;">
+          Es más simple de lo que pensás. 4 pasos y estás cosechando tus propios hongos.
+        </p>
+      </div>
+
+      <div class="grid grid-4">
+        <div class="card" style="text-align: center;">
+          <div style="font-size: 48px; margin-bottom: 16px;">📦</div>
+          <h4 style="margin-bottom: 12px;">1. Recibís el kit</h4>
+          <p class="text-muted" style="margin: 0; font-size: 14px;">
+            Te llega el sustrato ya colonizado en bolsa lista para fructificar. No necesitás inocular nada.
+          </p>
+        </div>
+
+        <div class="card" style="text-align: center;">
+          <div style="font-size: 48px; margin-bottom: 16px;">✂️</div>
+          <h4 style="margin-bottom: 12px;">2. Abrís y ubicás</h4>
+          <p class="text-muted" style="margin: 0; font-size: 14px;">
+            Hacés cortes en cruz en la bolsa. Ubicás en lugar con luz indirecta (cocina, lavadero).
+          </p>
+        </div>
+
+        <div class="card" style="text-align: center;">
+          <div style="font-size: 48px; margin-bottom: 16px;">💧</div>
+          <h4 style="margin-bottom: 12px;">3. Rociás 2 veces/día</h4>
+          <p class="text-muted" style="margin: 0; font-size: 14px;">
+            Pulverizás agua 2 veces al día (mañana y noche). Mantener humedad alta.
+          </p>
+        </div>
+
+        <div class="card" style="text-align: center;">
+          <div style="font-size: 48px; margin-bottom: 16px;">🍄</div>
+          <h4 style="margin-bottom: 12px;">4. Cosechás</h4>
+          <p class="text-muted" style="margin: 0; font-size: 14px;">
+            En 10-15 días tenés hongos frescos listos para cocinar. 2-3 oleadas por kit.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KITS DISPONIBLES -->
+  <section class="reveal" style="background: var(--surface); padding: 80px 0;">
+    <div class="container">
+      <div class="text-center mb-xl">
+        <h2 class="section-title">Kits disponibles</h2>
+        <p class="section-subtitle" style="margin: 0 auto;">
+          Elegí según tu experiencia y el tipo de hongo que querés cultivar.
+        </p>
+      </div>
+
+      <div class="grid grid-3">
+        <!-- KIT PRINCIPIANTE -->
+        <div class="card">
+          <span class="badge badge-success">Más popular</span>
+          <h3 style="margin: 16px 0;">Kit Principiante - Gírgola Gris</h3>
+          <p class="text-muted" style="margin-bottom: 24px;">
+            Ideal para empezar. La especie más fácil y resistente. Incluye todo lo necesario.
+          </p>
+
+          <div style="border-top: 1px solid var(--border); padding-top: 20px; margin-bottom: 20px;">
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 8px;">
+              <li style="display: flex; gap: 8px;"><span style="color: var(--sage);">✓</span> Sustrato colonizado 3kg</li>
+              <li style="display: flex; gap: 8px;"><span style="color: var(--sage);">✓</span> Instrucciones detalladas</li>
+              <li style="display: flex; gap: 8px;"><span style="color: var(--sage);">✓</span> Pulverizador incluido</li>
+              <li style="display: flex; gap: 8px;"><span style="color: var(--sage);">✓</span> Soporte por WhatsApp 30 días</li>
+              <li style="display: flex; gap: 8px;"><span style="color: var(--sage);">✓</span> Rendimiento estimado: 600-900g</li>
+            </ul>
+          </div>
+
+          <div style="border-top: 1px solid var(--border); padding-top: 20px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+              <span style="color: var(--cream-muted);">Precio:</span>
+              <span style="font-family: 'Fraunces', serif; font-size: 28px; font-weight: 700; color: var(--amber);">$12.500</span>
+            </div>
+            <a href="https://wa.me/5491122798768?text=Hola!%20Quiero%20comprar%20el%20Kit%20Principiante%20-%20Gírgola%20Gris" 
+               class="btn btn-primary" style="width: 100%;" target="_blank">
+              Comprar ahora
+            </a>
+          </div>
+        </div>
+
+        <!-- KIT INTERMEDIO -->
+        <div class="card">
+          <h3 style="margin: 0 0 16px 0;">Kit Intermedio - Gírgola Reina</h3>
+          <p class="text-muted" style="margin-bottom: 24px;">
+            Para quienes ya tienen experiencia. Mayor valor gastronómico y precio de venta.
+          </p>
+
+          <div style="border-top: 1px solid var(--border); padding-top: 20px; margin-bottom: 20px;">
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 8px;">
+              <li style="display: flex; gap: 8px;"><span style="color: var(--sage);">✓</span> Sustrato colonizado 3kg</li>
+              <li style="display: flex; gap: 8px;"><span style="color: var(--sage);">✓</span> Instrucciones avanzadas</li>
+              <li style="display: flex; gap: 8px;"><span style="color: var(--sage);">✓</span> Guía de comercialización</li>
+              <li style="display: flex; gap: 8px;"><span style="color: var(--sage);">✓</span> Soporte técnico 30 días</li>
+              <li style="display: flex; gap: 8px;"><span style="color: var(--sage);">✓</span> Rendimiento estimado: 500-750g</li>
+            </ul>
+          </div>
+
+          <div style="border-top: 1px solid var(--border); padding-top: 20px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+              <span style="color: var(--cream-muted);">Precio:</span>
+              <span style="font-family: 'Fraunces', serif; font-size: 28px; font-weight: 700; color: var(--amber);">$14.800</span>
+            </div>
+            <a href="https://wa.me/5491122798768?text=Hola!%20Quiero%20comprar%20el%20Kit%20Intermedio%20-%20Gírgola%20Reina" 
+               class="btn btn-primary" style="width: 100%;" target="_blank">
+              Comprar ahora
+            </a>
+          </div>
+        </div>
+
+        <!-- KIT PREMIUM -->
+        <div class="card">
+          <span class="badge badge-warning">Premium</span>
+          <h3 style="margin: 16px 0;">Kit Premium - Shiitake</h3>
+          <p class="text-muted" style="margin-bottom: 24px;">
+            El hongo gourmet por excelencia. Ciclo más largo pero máximo valor comercial.
+          </p>
+
+          <div style="border-top: 1px solid var(--border); padding-top: 20px; margin-bottom: 20px;">
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 8px;">
+              <li style="display: flex; gap: 8px;"><span style="color: var(--sage);">✓</span> Tronco colonizado 40cm</li>
+              <li style="display: flex; gap: 8px;"><span style="color: var(--sage);">✓</span> Instrucciones detalladas</li>
+              <li style="display: flex; gap: 8px;"><span style="color: var(--sage);">✓</span> Asesoramiento personalizado</li>
+              <li style="display: flex; gap: 8px;"><span style="color: var(--sage);">✓</span> Soporte técnico 60 días</li>
+              <li style="display: flex; gap: 8px;"><span style="color: var(--sage);">✓</span> Rendimiento estimado: 400-600g</li>
+            </ul>
+          </div>
+
+          <div style="border-top: 1px solid var(--border); padding-top: 20px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+              <span style="color: var(--cream-muted);">Precio:</span>
+              <span style="font-family: 'Fraunces', serif; font-size: 28px; font-weight: 700; color: var(--amber);">$18.500</span>
+            </div>
+            <a href="https://wa.me/5491122798768?text=Hola!%20Quiero%20comprar%20el%20Kit%20Premium%20-%20Shiitake" 
+               class="btn btn-primary" style="width: 100%;" target="_blank">
+              Comprar ahora
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center" style="margin-top: 40px;">
+        <p class="text-muted" style="margin-bottom: 16px;">
+          ¿No sabés cuál elegir? Hablanos y te asesoramos según tu experiencia.
+        </p>
+        <a href="https://wa.me/5491122798768?text=Hola!%20Necesito%20asesoramiento%20para%20elegir%20un%20kit" 
+           class="btn btn-secondary" target="_blank">
+          Consultar por WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFICIOS -->
+  <section class="reveal">
+    <div class="container">
+      <div class="grid grid-3">
+        <div class="card" style="text-align: center;">
+          <div style="font-size: 48px; margin-bottom: 16px;">🎁</div>
+          <h4 style="margin-bottom: 12px;">Ideal para regalar</h4>
+          <p class="text-muted" style="margin: 0;">
+            El regalo perfecto para curiosos, foodies y amantes de la cocina. Experiencia única.
+          </p>
+        </div>
+
+        <div class="card" style="text-align: center;">
+          <div style="font-size: 48px; margin-bottom: 16px;">📚</div>
+          <h4 style="margin-bottom: 12px;">Aprende haciendo</h4>
+          <p class="text-muted" style="margin: 0;">
+            La mejor forma de entender el cultivo es viéndolo crecer. Después podés escalar con insumos.
+          </p>
+        </div>
+
+        <div class="card" style="text-align: center;">
+          <div style="font-size: 48px; margin-bottom: 16px;">🥘</div>
+          <h4 style="margin-bottom: 12px;">Hongos ultra frescos</h4>
+          <p class="text-muted" style="margin: 0;">
+            Cosechás y cocinás en el día. Sabor, textura y aroma incomparables vs. hongos de verdulería.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="reveal">
+    <div class="container-narrow">
+      <h2 class="text-center mb-lg">Preguntas frecuentes sobre los kits</h2>
+
+      <div style="display: flex; flex-direction: column; gap: 16px;">
+        <details class="faq-detail">
+          <summary>¿Cuánto duran los kits?</summary>
+          <p>El kit debe activarse dentro de los 15 días de recibido. Una vez activado, produce 2-3 oleadas en un período de 4-6 semanas.</p>
+        </details>
+
+        <details class="faq-detail">
+          <summary>¿Necesito equipamiento especial?</summary>
+          <p>No. Solo necesitás un pulverizador (incluido en el kit principiante) y un lugar con luz indirecta. Cocina o lavadero funcionan perfecto.</p>
+        </details>
+
+        <details class="faq-detail">
+          <summary>¿Qué pasa si algo sale mal?</summary>
+          <p>Todos los kits incluyen soporte técnico por WhatsApp. Te acompañamos en cada etapa y resolvemos cualquier problema que surja.</p>
+        </details>
+
+        <details class="faq-detail">
+          <summary>¿Puedo cultivar en departamento?</summary>
+          <p>Sí, perfectamente. Los hongos no necesitan tierra ni mucho espacio. Un rincón de la cocina o balcón interno es suficiente.</p>
+        </details>
+
+        <details class="faq-detail">
+          <summary>¿Los hongos son seguros para consumir?</summary>
+          <p>100%. Son las mismas especies que se venden en verdulerías y restaurantes, pero ultra frescas. Todas nuestras cepas están certificadas.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA COMBO -->
+  <section class="reveal">
+    <div class="container">
+      <div class="card" style="text-align: center; padding: 60px 40px; background: linear-gradient(135deg, var(--surface) 0%, var(--surface2) 100%);">
+        <span class="badge badge-success" style="font-size: 14px; padding: 8px 20px;">Oferta especial</span>
+        <h2 style="margin: 24px 0 16px;">Kit + Curso Virtual = Ahorro + Conocimiento</h2>
+        <p class="section-subtitle" style="margin: 0 auto 40px;">
+          Comprá un kit + el curso virtual y te hacemos <strong>20% de descuento en el combo</strong>. 
+          Aprendés la teoría y la practicás inmediatamente.
+        </p>
+        <a href="https://wa.me/5491122798768?text=Hola!%20Quiero%20información%20sobre%20el%20combo%20Kit%20+%20Curso" 
+           class="btn btn-primary btn-large" target="_blank">
+          Consultar combo
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>FunGuys</h4>
+          <p style="color: var(--cream-muted); font-size: 14px; line-height: 1.6;">
+            Cultivo de hongos comestibles en Argentina.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Contacto</h4>
+          <ul>
+            <li><a href="mailto:ferocampo087@gmail.com">ferocampo087@gmail.com</a></li>
+            <li><a href="https://wa.me/5491122798768" target="_blank">+54 9 11 2279 8768</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 FunGuys. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/cart.js"></script>
+  <script>
+    function toggleMobileNav() {
+      document.body.classList.toggle('mobile-nav-open');
+    }
+
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    reveals.forEach(el => observer.observe(el));
+
+    window.addEventListener('scroll', () => {
+      document.getElementById('mainNav').classList.toggle('scrolled', window.scrollY > 60);
+    });
+  </script>
+
+  <style>
+    .faq-detail {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    .faq-detail:hover { border-color: var(--border-strong); }
+    .faq-detail summary {
+      font-weight: 600;
+      color: var(--white);
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .faq-detail summary::-webkit-details-marker { display: none; }
+    .faq-detail summary::after {
+      content: '+';
+      font-size: 24px;
+      color: var(--amber);
+      transition: transform 0.3s;
+    }
+    .faq-detail[open] summary::after { transform: rotate(45deg); }
+    .faq-detail p {
+      margin-top: 16px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+      color: var(--cream-muted);
+      line-height: 1.7;
+    }
+  </style>
+</body>
+</html>

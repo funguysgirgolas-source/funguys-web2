@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Insumos profesionales para cultivo de hongos comestibles. Sustratos, spawn certificado, materiales y equipamiento.">
+  <title>Insumos Profesionales | FunGuys</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Config URLs -->
+  <script>
+    window.INVENTORY_SCRIPT_URL = 'REEMPLAZAR_CON_URL'; // URL del Apps Script de inventario
+    window.ORDERS_SCRIPT_URL = 'REEMPLAZAR_CON_URL'; // URL del Apps Script de pedidos
+  </script>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="main-nav" id="mainNav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        Fun<span>Guys</span>
+      </a>
+      
+      <ul class="nav-menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="quienes-somos.html">Quiénes somos</a></li>
+        <li><a href="cursos.html">Cursos</a></li>
+        <li><a href="kits.html">Kits</a></li>
+        <li><a href="insumos.html" class="active">Insumos</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li>
+          <a href="#cart" class="nav-cta" onclick="event.preventDefault(); scrollToCart();" style="position: relative;">
+            🛒 Carrito
+            <span id="cartCount" style="display: none; position: absolute; top: -8px; right: -8px; 
+                  background: #dc2626; color: white; border-radius: 50%; width: 20px; height: 20px; 
+                  font-size: 11px; display: flex; align-items: center; justify-content: center; font-weight: 700;">0</span>
+          </a>
+        </li>
+      </ul>
+
+      <div class="hamburger" onclick="toggleMobileNav()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section style="padding-top: 140px; padding-bottom: 60px;">
+    <div class="container">
+      <div class="text-center">
+        <span class="badge">🌾 Stock actualizado en tiempo real</span>
+        <h1 style="margin-top: 24px; margin-bottom: 24px;">
+          Insumos profesionales para <em style="color: var(--amber); font-style: italic;">tu producción</em>
+        </h1>
+        <p class="section-subtitle" style="margin: 0 auto; max-width: 700px;">
+          Sustratos, spawn certificado, materiales y consumibles. Todo lo que necesitás para escalar tu cultivo de hongos comestibles. 
+          <strong>Envíos a toda Argentina.</strong>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATÁLOGO DE PRODUCTOS -->
+  <section>
+    <div class="container">
+      <!-- Filtros (opcional - implementar después) -->
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px; flex-wrap: wrap; gap: 16px;">
+        <div>
+          <h3 style="margin: 0; color: var(--white);">Catálogo completo</h3>
+          <p class="text-muted" style="margin: 4px 0 0 0; font-size: 14px;">
+            <span id="productCount">Cargando...</span>
+          </p>
+        </div>
+        
+        <button onclick="inventory.fetchProducts(true); inventory.renderCatalog('catalogContainer');" 
+                class="btn btn-ghost btn-small">
+          🔄 Actualizar stock
+        </button>
+      </div>
+
+      <!-- Contenedor del catálogo -->
+      <div id="catalogContainer">
+        <div style="text-align: center; padding: 80px 24px;">
+          <div class="spinner"></div>
+          <p style="color: var(--cream-muted); margin-top: 20px;">Cargando productos...</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CARRITO -->
+  <section id="cart" style="background: var(--surface); padding: 80px 0; margin-top: 80px;">
+    <div class="container-narrow">
+      <div class="text-center mb-lg">
+        <h2>🛒 Tu carrito</h2>
+        <p class="text-muted">Revisá tu pedido antes de finalizar la compra</p>
+      </div>
+
+      <div id="cartContainer">
+        <div style="text-align: center; padding: 60px 24px; color: var(--cream-muted);">
+          <div style="font-size: 64px; margin-bottom: 16px;">🛒</div>
+          <p style="font-size: 18px;">Tu carrito está vacío</p>
+          <a href="#catalog" onclick="event.preventDefault(); document.getElementById('catalogContainer').scrollIntoView({ behavior: 'smooth' });" 
+             class="btn btn-primary" style="margin-top: 24px;">
+            Ver productos
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFICIOS -->
+  <section class="reveal">
+    <div class="container">
+      <div class="grid grid-3">
+        <div class="card" style="text-align: center;">
+          <div class="card-icon">🚚</div>
+          <h4>Envíos a todo el país</h4>
+          <p class="text-muted">Trabajamos con Andreani y OCA para llegar a todas las provincias.</p>
+        </div>
+
+        <div class="card" style="text-align: center;">
+          <div class="card-icon">✅</div>
+          <h4>Stock certificado</h4>
+          <p class="text-muted">Spawn producido en laboratorio controlado. Sustratos de calidad garantizada.</p>
+        </div>
+
+        <div class="card" style="text-align: center;">
+          <div class="card-icon">💬</div>
+          <h4>Soporte técnico</h4>
+          <p class="text-muted">Asesoramiento post-compra por WhatsApp. Te ayudamos a optimizar tu producción.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ RÁPIDO -->
+  <section class="reveal">
+    <div class="container-narrow">
+      <h2 class="text-center mb-lg">Preguntas frecuentes</h2>
+
+      <div style="display: flex; flex-direction: column; gap: 16px;">
+        <details class="faq-detail">
+          <summary>¿Cómo realizo el pedido?</summary>
+          <p>Agregás los productos al carrito, completás tus datos y te redirigimos a WhatsApp con el resumen del pedido. Ahí te pasamos los datos para la transferencia.</p>
+        </details>
+
+        <details class="faq-detail">
+          <summary>¿Cuánto demora el envío?</summary>
+          <p>Una vez confirmado el pago, despachamos en 24-48hs hábiles. El tiempo de llegada depende de tu ubicación (CABA: 2-3 días, Interior: 4-7 días).</p>
+        </details>
+
+        <details class="faq-detail">
+          <summary>¿El spawn viene listo para usar?</summary>
+          <p>Sí, el spawn viene colonizado en grano de cereal y listo para inocular. Viene refrigerado para máxima viabilidad.</p>
+        </details>
+
+        <details class="faq-detail">
+          <summary>¿Hacen ventas mayoristas?</summary>
+          <p>Sí, contactanos por WhatsApp para cotizaciones especiales en compras +50kg o $100.000.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="reveal">
+    <div class="container">
+      <div class="card" style="text-align: center; padding: 60px 40px; background: linear-gradient(135deg, var(--surface) 0%, var(--surface2) 100%);">
+        <h2 style="margin-bottom: 16px;">¿Necesitás asesoramiento?</h2>
+        <p class="section-subtitle" style="margin: 0 auto 40px;">
+          Hablemos por WhatsApp. Te ayudamos a elegir los insumos correctos para tu proyecto.
+        </p>
+        <a href="https://wa.me/5491122798768?text=Hola%20FunGuys!%20Necesito%20asesoramiento%20sobre%20insumos%20para%20cultivo" 
+           class="btn btn-primary btn-large" target="_blank">
+          💬 Escribinos ahora
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>FunGuys</h4>
+          <p style="color: var(--cream-muted); font-size: 14px; line-height: 1.6;">
+            Cultivo de hongos comestibles en Argentina. Formación, kits e insumos profesionales.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navegación</h4>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="quienes-somos.html">Quiénes somos</a></li>
+            <li><a href="cursos.html">Cursos</a></li>
+            <li><a href="kits.html">Kits</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Productos</h4>
+          <ul>
+            <li><a href="insumos.html">Insumos</a></li>
+            <li><a href="servicios.html">Consultoría</a></li>
+            <li><a href="admin.html">Panel admin</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contacto</h4>
+          <ul>
+            <li><a href="mailto:ferocampo087@gmail.com">ferocampo087@gmail.com</a></li>
+            <li><a href="https://wa.me/5491122798768" target="_blank">+54 9 11 2279 8768</a></li>
+            <li><a href="https://instagram.com/funguys.girgolas" target="_blank">@funguys.girgolas</a></li>
+            <li>City Bell, La Plata, Buenos Aires</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 FunGuys. Todos los derechos reservados. | Ing. Fernando David Ocampo</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/cart.js"></script>
+  <script src="js/inventory.js"></script>
+
+  <script>
+    // Inicializar
+    document.addEventListener('DOMContentLoaded', async () => {
+      // Cargar inventario
+      await inventory.fetchProducts();
+      inventory.renderCatalog('catalogContainer');
+      
+      // Actualizar contador de productos
+      document.getElementById('productCount').textContent = 
+        `${inventory.products.length} productos disponibles`;
+
+      // Renderizar carrito
+      renderCart('cartContainer');
+    });
+
+    // Actualizar carrito cuando cambia
+    cart.onChange(() => {
+      renderCart('cartContainer');
+    });
+
+    // Scroll to cart
+    function scrollToCart() {
+      document.getElementById('cart').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Mobile nav toggle
+    function toggleMobileNav() {
+      document.body.classList.toggle('mobile-nav-open');
+    }
+
+    // Scroll reveal
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) e.target.classList.add('visible');
+      });
+    }, { threshold: 0.1 });
+    reveals.forEach(el => observer.observe(el));
+
+    // Nav scroll effect
+    window.addEventListener('scroll', () => {
+      const nav = document.getElementById('mainNav');
+      nav.classList.toggle('scrolled', window.scrollY > 60);
+    });
+  </script>
+
+  <style>
+    .faq-detail {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .faq-detail:hover {
+      border-color: var(--border-strong);
+    }
+
+    .faq-detail summary {
+      font-weight: 600;
+      color: var(--white);
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .faq-detail summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-detail summary::after {
+      content: '+';
+      font-size: 24px;
+      color: var(--amber);
+      transition: transform 0.3s;
+    }
+
+    .faq-detail[open] summary::after {
+      transform: rotate(45deg);
+    }
+
+    .faq-detail p {
+      margin-top: 16px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+      color: var(--cream-muted);
+      line-height: 1.7;
+    }
+  </style>
+</body>
+</html>
